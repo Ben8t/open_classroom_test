@@ -1,0 +1,12 @@
+id: push
+namespace: null
+tasks:
+
+  - id: push
+    type: io.kestra.plugin.git.PushFlows
+    url: https://github.com/Ben8t/open_classroom_test.git
+    username: ben8t
+    branch: main
+    password: "{{ secret('GITHUB_TOKEN') }}"
+    sourceNamespace: '{{ flow.namespace }}'
+
